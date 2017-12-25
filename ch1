@@ -1,0 +1,30 @@
+
+public class ch1 {
+	public static  void main(String[] arg){
+		double s=0;
+		int n=0;
+		double m=1;
+		int i=1;
+		int j=1;
+		try {
+			Scanner scanner = new Scanner(System.in);
+		
+			n=scanner.nextInt();
+			scanner.close();
+		}catch (Exception e) {
+			System.out.println("输入数据错误！！！");
+			System.out.println("错误信息：" + e.getMessage());
+			}
+  for(i=1;i<=n;i++) {
+	  for(j=1;j<=i;j++) {
+		  m=j*m; 
+	  }
+	  s=s+i/m;
+  }
+  s+=1;
+  System.out.println(String.format("%.5f", s));
+
+  }
+
+	
+}
