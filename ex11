@@ -1,0 +1,23 @@
+
+public class ex11 {
+	public static void main(String[] args) throws IOException {
+		boolean contiGo = true;
+		String str;
+		BufferedReader buf = new BufferedReader(
+				new InputStreamReader(System.in));
+                                      
+		String regex = "^\\d+|(\\d+.\\d+)$";
+		String phoneNumber = "";
+		while (contiGo) {
+			System.out.println("请输入整数或小数");
+			phoneNumber = buf.readLine();
+			boolean match =phoneNumber.matches(regex);
+			if (match) {
+				System.out.println(phoneNumber + "是合法数据" );
+				break;
+			}
+			else System.out.println(phoneNumber + "不是合法数据" );
+		}
+	}
+
+}
